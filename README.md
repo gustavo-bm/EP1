@@ -13,7 +13,7 @@ Avaliar o impacto da ferramenta **SmartRefactor** em comparação com a refatora
 
 ## 📁 Estrutura
 
-* **Script principal**: `analise_refatoracao.py`
+* **Script principal**: `main.py`
 * **Entrada**: `Dados coletados - refactoring.xlsx`
 * **Saída**: Gráficos salvos na pasta `graficos/` + resultados impressos no console
 * **Análises**:
@@ -28,13 +28,14 @@ Avaliar o impacto da ferramenta **SmartRefactor** em comparação com a refatora
 * Python 3 com:
 
   * `pandas`, `numpy`, `matplotlib`, `seaborn`, `scipy`
-* Todos os testes estão descritos e implementados no script (ver apêndice no relatório em PDF)
+* Todos os testes estão descritos e implementados no script
 
-## 📎 Resultado Esperado
+## 💫 Referências
 
-Relatório final em PDF com:
+https://pandas.pydata.org/
 
-* Interpretação dos testes
-* Discussão sobre ameaças à validade
-* Análise do perfil dos participantes
-* Apêndice com o script completo
+https://seaborn.pydata.org/
+
+https://www.scipy.org/
+
+https://matplotlib.org/
