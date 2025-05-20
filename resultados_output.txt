@@ -1,0 +1,116 @@
+Dados carregados com sucesso!
+
+ANÁLISE DESCRITIVA
+        Tempo (h)  LOC Modificadas  Erros Funcionais  Problemas de Design
+count  120.000000       120.000000        120.000000           120.000000
+mean     2.261880       161.801792          1.591667             3.808333
+std      0.434438        28.606165          1.362745             2.220212
+min      1.078997       106.790499          0.000000             0.000000
+25%      1.969821       140.884641          0.750000             2.000000
+50%      2.288019       159.485186          1.000000             3.500000
+75%      2.558064       182.252690          2.000000             5.000000
+max      3.214068       228.271272          6.000000            11.000000
+
+Resumo por Ferramenta (média, desvio padrão, mediana):
+              Tempo (h)                     LOC Modificadas                        Erros Funcionais                  Problemas de Design                 
+                   mean       std    median            mean        std      median             mean       std median                mean       std median
+Ferramenta                                                                                                                                               
+SmartRefactor   2.04338  0.366918  2.030398      143.620952  18.264064  143.602046         0.866667  0.853044    1.0            2.900000  1.664179    3.0
+Tradicional     2.48038  0.385926  2.505456      179.982632  25.389531  181.107809         2.316667  1.396019    2.0            4.716667  2.344063    5.0
+
+Distribuições dos participantes:
+
+Formação:
+Formacao
+Graduação         58
+Mestrado          45
+Especialização    17
+Name: count, dtype: int64
+
+Experiência:
+Experiencia
+3-5 anos    51
+1-2 anos    29
+6+ anos     25
+< 1 ano     15
+Name: count, dtype: int64
+
+Conhecimento em Java:
+Conhecimento_Java
+Razoável    56
+Básico      32
+Avançado    23
+Nenhum       9
+Name: count, dtype: int64
+
+Conhecimento em Refatoração:
+Conhecimento_Refatoracao
+Básico      41
+Razoável    37
+Avançado    27
+Nenhum      15
+Name: count, dtype: int64
+
+ANÁLISE INFERENCIAL (Testes de Hipótese)
+
+Teste T-Student para Tempo (h):
+t = -6.3567, p = 0.0000
+Diferença estatística significativa entre as ferramentas.
+
+Teste T-Student para Problemas de Design:
+t = -4.8950, p = 0.0000
+Diferença estatística significativa entre as ferramentas.
+
+Teste T-Student para LOC Modificadas:
+t = -9.0054, p = 0.0000
+Diferença estatística significativa entre as ferramentas.
+
+Teste Mann-Whitney U para Erros Funcionais:
+U = 697.00, p = 0.0000
+Diferença estatística significativa entre as ferramentas.
+
+ANÁLISE ADICIONAL (Correlação e Regressão)
+
+Correlação de Spearman entre Experiência e Erros Funcionais: r = -0.016
+Correlação fraca ou nula.
+
+Regressão Linear com Interação entre Ferramenta e Experiência:
+                              OLS Regression Results                             
+=================================================================================
+Dep. Variable:     Q("Erros Funcionais")   R-squared:                       0.286
+Model:                               OLS   Adj. R-squared:                  0.268
+Method:                    Least Squares   F-statistic:                     15.51
+Date:                   Mon, 19 May 2025   Prob (F-statistic):           1.51e-08
+Time:                           23:48:37   Log-Likelihood:                -186.68
+No. Observations:                    120   AIC:                             381.4
+Df Residuals:                        116   BIC:                             392.5
+Df Model:                              3                                         
+Covariance Type:               nonrobust                                         
+========================================================================================================
+                                           coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------
+Intercept                                0.8663      0.284      3.051      0.003       0.304       1.429
+C(Ferramenta)[T.Tradicional]             1.5443      0.411      3.761      0.000       0.731       2.358
+Exp_Num                                  0.0001      0.070      0.002      0.999      -0.138       0.139
+C(Ferramenta)[T.Tradicional]:Exp_Num    -0.0253      0.098     -0.258      0.797      -0.219       0.169
+==============================================================================
+Omnibus:                        6.261   Durbin-Watson:                   1.806
+Prob(Omnibus):                  0.044   Jarque-Bera (JB):                5.816
+Skew:                           0.453   Prob(JB):                       0.0546
+Kurtosis:                       3.584   Cond. No.                         22.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Análise para grupo de experiência: Alta
+U = 33.50, p = 0.0157
+Diferença significativa entre ferramentas nesse grupo.
+
+Análise para grupo de experiência: Média
+U = 290.00, p = 0.0000
+Diferença significativa entre ferramentas nesse grupo.
+
+Análise para grupo de experiência: Baixa
+U = 7.50, p = 0.0191
+Diferença significativa entre ferramentas nesse grupo.
